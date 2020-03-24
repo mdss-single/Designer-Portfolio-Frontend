@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Playfair+Display:400,700')
+
+$tablet-small = "screen and (min-width:768px)";
+$tablet = "screen and (min-width:992px)";
+$desktop = "screen and (min-width:1200px)";
+.input-text
+.textarea
+	width 100%
+	height 38px
+	color #000
+	font-size 1.4rem
+	background-color transparent
+	border 0
+	border-bottom 1px solid #888
+	padding 0 3px
+	transition all .2s
+	&:focus
+		border-bottom-color #000
+	& + label
+		position absolute
+		top 50%
+		left 3px
+		color #ccc
+		pointer-events none
+		transform translateY(-50%)
+		transition all .2s
+	&:focus + label
+	&:not(:placeholder-shown) + label
+		top 0
+		font-size 1.2rem
+		transform translateY(-100%)
+	&:not(:valid)
+		box-shadow none
+		border-bottom-color #f00
+.textarea
+	height 90px
+	min-height 90px
+	padding 10px 3px
+	resize vertical
+	transition border-color .2s
+	& + label
+		top 20px
+		text-replace none
+.btn
+	display inline-flex
+	align-items center
+	height 50px
+	color #000
+	font-size 1.4rem
+	text-transform uppercase
+	text-decoration none
+	background-color transparent
+	border 1px solid currentColor
+	padding 0 80px
+	cursor pointer
+	transition all .2s
+	&:hover
+	&:focus
+		color #666
+@keyframes fadeIn
+	from
+		opacity 0
+	to
+		opacity 1
+@keyframes fadeOut
+	from
+		opacity 1
+	to
+		opacity 0
+.no-scroll
+	overflow hidden
+.page-title
+	text-align center
+	margin-bottom 30px
+	@media $desktop
+		margin-bottom 110px
+	&--line
+		position relative
+		margin-bottom 200px
+		&::before
+			position absolute
+			bottom -240px
+			left 50%
+			width 1px
+			height 130px
+			background-color #888
+			content ''
+			transform translateY(-50%)
+	h1
+		color #000
+		font normal 6.5rem/1 fontSub
+		margin 0
+		@media $desktop
+			font-size 9.5rem
+	&__sub
+		color #888
+		font-size 2.2rem
+		margin-top 10px
+.text-styled
+	color #000
+	line-height 1.6
+	blockquote
+		position relative
+		color #888
+		font-size 2.2rem
+		padding-left 45px
+		margin-left 0
+		&::before
+			position absolute
+			top 8px
+			bottom @top
+			left 0
+			width 15px
+			background-color #eee
+			content ''
